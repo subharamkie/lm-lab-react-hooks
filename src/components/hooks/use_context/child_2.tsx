@@ -1,10 +1,8 @@
-export const Child2: React.FC<{ dark: boolean }> = ({ dark }) => {
-	const theme = {
-		backgroundColor: dark ? '#333' : '#CCC',
-		color: dark ? 'white' : '#333',
-		padding: '2rem',
-		margin: '2rem',
-	};
+import { useContext } from "react";
+import {Theme,ThemeContext} from './parent'
 
-	return <div style={theme}>Child 2</div>;
+export const Child2: React.FC<{ dark:Theme }> = ({ dark }) => {
+	const theme = useContext(ThemeContext);
+
+	return <div style={dark?dark:theme}>Child 2</div>;
 };
