@@ -7,8 +7,6 @@ export const MemoExample = () => {
 	const [numberObj, setNumberObj] = useState({ input: 0 });
 	const [inputValue,setInputValue] = useState('');
 	const doubleNumber = useMemo(() => {return slowFunction(numberObj.input);},[numberObj.input]);
-	 
-
 	return (
 		<>
 			<h2>useMemo</h2>
