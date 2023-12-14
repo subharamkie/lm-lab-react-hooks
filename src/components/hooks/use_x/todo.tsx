@@ -1,4 +1,3 @@
-import {useState} from "react";
 import useToDo from "./use_todo";
 
 /** This is the response that TypiCode gives for the /todos/ endpoint */
